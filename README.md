@@ -185,28 +185,28 @@ Il faut vérifier que les coordonnées calculées restent dans les limites de l'
 
 ## Exercice 5 — Tri des pixels
 
-**Tri de tous les pixels par luminosité croissante**
+**Tri de tous les pixels par luminosité croissante :**
 
 | Image originale | Image triée |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Tri par luminosité](images/difficulte-3/tri_tous_pixels_luminosite.png) |
 
 
-**Tri des pixels de chaque colonne selon les valeurs croissantes de rouge**
+**Tri des pixels de chaque colonne selon les valeurs croissantes de rouge :**
 
 | Image originale | Image triée |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Tri par rouge dans chaque colonne](images/difficulte-3/tri_pixels_colonne_rouge.png) |
 
 
-**Tri des pixels de chaque ligne selon les valeurs croissantes de bleu**
+**Tri des pixels de chaque ligne selon les valeurs croissantes de bleu :**
 
 | Image originale | Image triée |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Tri par bleu dans chaque ligne](images/difficulte-3/tri_pixels_ligne_bleu.png) |
 
 
-**Tri aléatoire de pixels sur les lignes selon les valeurs décroissantes de vert**
+**Tri aléatoire de pixels sur les lignes selon les valeurs décroissantes de vert :**
 
 | Image originale | Image triée |
 |:---:|:---:|
@@ -297,6 +297,6 @@ Il faut faire attention à bien gérer les pixels situés sur les bords de l'ima
 |:---:|:---:|
 | ![Image originale](images/photo.jpg) | ![Différence de flou](images/difficulte-4/diff_flou.png) |
 
-l'algorithme sert à faire une différence de deux mêmes images mais avec un flou plus ou moins prononcé afin d'obtenir une image en noir et blanc faisant ressortir les contours. 
+L'algorithme sert à faire une différence de deux mêmes images mais avec un flou plus ou moins prononcé afin d'obtenir une image en noir et blanc faisant ressortir les contours. 
 J'ai mis les valeurs de la taille du kernel et de la différence entre les deux tailles de kernel comme arguments de la fonction pour que l'utilisateur puisse choisir l'effet qu'il veut. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
 Cependant, j'impose le seuil à 0.01 pour que les contours apparaissent mais sans être très larges.
