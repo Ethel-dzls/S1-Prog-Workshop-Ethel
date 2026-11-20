@@ -38,7 +38,7 @@
 
 ![Dégradé](images/difficulte-1/degrade.png)
 
-J'ai mis la valeur de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+J'ai mis les valeurs de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
 Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 
 
@@ -97,6 +97,8 @@ Pour éclaircir l'image, j'applique la racine carrée à chaque composante de co
 
 ![Disque](images/difficulte-2/disque.png)
 
+J'ai mis les valeurs de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 J'ai mis la valeur du rayon comme argument de la fonction pour que l'utilisateur puisse le choisir. Pour cela, j'ai inclus dans ma fonction main() la demande de cette valeur.
 Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 
@@ -105,6 +107,8 @@ Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoi
 
 ![Cercle](images/difficulte-2/cercle.png)
 
+J'ai mis la valeur de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 J'ai mis les valeurs du rayon et de l'épaisseur comme arguments de la fonction pour que l'utilisateur puisse les choisir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
 Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 
@@ -113,6 +117,8 @@ Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoi
 
 ![Animation](images/difficulte-2/animation.gif)
 
+J'ai mis la valeur de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 J'ai appris comment il faut faire pour sauvegarder toutes les images une à une dans une boucle.
 
 
@@ -124,6 +130,8 @@ J'ai appris comment il faut faire pour sauvegarder toutes les images une à une 
 
 ![Rosace](images/difficulte-3/rosace.png)
 
+J'ai mis la valeur de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 J'ai mis les valeurs du rayon et de l'épaisseur comme arguments de la fonction pour que l'utilisateur puisse les choisir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
 Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 Il faut faire attention à l'unité des angles qui doivent être exprimés en radians.
