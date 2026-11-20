@@ -130,8 +130,8 @@ void peinture_huile(sil::Image const& image)
                         // Couleur du pixel voisin
                         glm::vec3 const couleur{image.pixel(px, py)};
 
-                        // Calcul de sa luminosité en faisant la moyenne de ses trois canaux RGB.
-                        float const luminosite{(couleur.r + couleur.g + couleur.b) / 3.f};
+                        // Calcul de sa luminosité
+                        float const luminosite = 0.2126f * couleur.r + 0.7152f * couleur.g + 0.0722f * couleur.b;
 
                         // Attribution du pixel à un niveau de luminosité : la multiplication par nb_niveaux répartit les luminosités entre les différentes catégories
                         // std::min évite de dépasser le dernier indice du tableau
@@ -232,8 +232,8 @@ void hachures(sil::Image const& image)
             // Couleur du pixel original
             glm::vec3 const couleur{image.pixel(x, y)};
 
-            // Luminosité moyenne du pixel à partir des trois canaux RGB
-            float const luminosite{(couleur.r + couleur.g + couleur.b) / 3.f};
+            // Calcul de sa luminosité
+            float const luminosite = 0.2126f * couleur.r + 0.7152f * couleur.g + 0.0722f * couleur.b;
 
             // La couleur de départ est le blanc
             float valeur{1.f};
@@ -315,7 +315,7 @@ void low_poly(sil::Image const& image)
     sil::Image nouvelle_image{image.width(), image.height()};
 
     // Taille des cellules de la grille qui sert à construire les triangles : une petite valeur produit davantage de triangles et conserve plus de détails
-    int const taille{15};
+    int const taille{12};
 
     // Parcours de l'image par cellules carrées de taille "taille"
     for (int x{0}; x < image.width(); x += taille)
@@ -411,8 +411,8 @@ void vision_thermique(sil::Image const& image)
             // Couleur du pixel original
             glm::vec3 const couleur{image.pixel(x, y)};
 
-            // Calcul de la luminosité moyenne à partir des trois canaux RGB : sert à choisir la couleur thermique de remplacement
-            float const luminosite{(couleur.r + couleur.g + couleur.b) / 3.f};
+            // Calcul de sa luminosité : sert à choisir la couleur thermique de remplacement
+            float const luminosite = 0.2126f * couleur.r + 0.7152f * couleur.g + 0.0722f * couleur.b;
 
             glm::vec3 nouvelle_couleur;
 

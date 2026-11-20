@@ -503,7 +503,7 @@ int main()
         sil::Image image{"images/chat.jpg"};
         vision_thermique(image);
     }
-      
+ 
         
 
     return 0;

@@ -487,6 +487,7 @@ Cet effet donne à l'image un aspect de peinture à l'huile. Pour chaque pixel, 
 | ![Image originale](images/chat.jpg) | ![Pointillisme](images/exos_perso/pointillisme.png) |
 
 Cet effet s'inspire de la technique du pointillisme, qui consiste à composer une image à partir de petits points de couleur. L'image est d'abord remplie de blanc, puis des cercles sont dessinés à intervalles réguliers. Chaque cercle reprend la couleur du pixel correspondant dans l'image originale.
+Selon la valeur du rayon et de l'espacement, l'image paraît plus ou moins claire dûe au fond blanc des espaces entre les points.
 
 
 ### Exercice 5 — Hachures
@@ -506,6 +507,7 @@ Cet effet transforme l'image en dessin noir et blanc à l'aide de motifs de lign
 | ![Image originale](images/chat.jpg) | ![Low Poly](images/exos_perso/low_poly.png) |
 
 Cet effet simplifie l'image en la découpant en triangles. Chaque triangle est rempli avec une couleur prélevée dans l'image originale, à proximité de son centre. L'ensemble forme une mosaïque géométrique qui conserve les principales couleurs et formes de l'image.
+On peut distinguer plus ou moins les triangles selon la valeur choisie pour la taille des cellules de la grille.
 
 
 ### Exercice 7 — Néon
