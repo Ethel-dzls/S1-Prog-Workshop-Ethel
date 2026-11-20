@@ -468,6 +468,7 @@ Cet effet déforme l'image pour donner une impression de bombement, comme si ell
 | ![Image originale](images/chat.jpg) | ![Ondulations](images/exos_perso/ondulations.png) |
 
 Cet effet déforme l'image en décalant les pixels horizontalement et verticalement selon des fonctions sinusoïdales. L'amplitude et la fréquence des sinus permettent de contrôler l'intensité et l'espacement des ondulations.
+J'ai défini la taille de la nouvelle image comme celle de l'image originale mais j'ai donc des zones noires sur les bords décalés. Pour y remédier, j'avais donc rajouté une partie dans ma fonction pour zoomer un peu dans l'image pour ne plus voir ces zones mais cela coupait une partie de l'image donc j'ai préféré enlever cette partie et garder les zones noires des bords. Je ne savais pas faire autrement pour enlever ces zones noires qu'en zoomant.
 
 
 ### Exercice 3 — Peinture à l'huile
