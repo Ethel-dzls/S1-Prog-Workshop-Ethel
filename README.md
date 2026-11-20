@@ -440,3 +440,95 @@ void diff_flou (sil::Image& image, int const taille_kernel, int const diff_kerne
   J'impose à la taille des kernels d'être impaire (et donc à la différence d'être paire) pour avoir un pixel central. 
   </p>
 </details>
+
+
+
+
+## Mes exercices
+
+En complément des exercices proposés, j'ai réalisé plusieurs effets personnels qui m'intéressaient afin d'explorer différentes transformations d'images et techniques de traitement des pixels. Pour m'aider, me suis basée sur la description des algorithmes derrière ces effets.
+Pour simplifier, je n'ai pas rajouté d'arguments au choix pour l'utilisateur.
+Egalement, j'ai simplifié l'expression de la luminosité en faisant uniquement la moyenne des valeurs des 3 canaux.
+
+
+### Exercice 1 — Effet fisheye
+
+| Image originale | Effet fisheye |
+|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Fisheye](images/exos_perso/fisheye.png) |
+
+
+Cet effet déforme l'image pour donner une impression de bombement, comme si elle était observée à travers une lentille grand-angle. La déformation dépend de la distance entre chaque pixel et le centre de l'image : plus un pixel est éloigné du centre, plus ses coordonnées sources sont rapprochées de celui-ci.
+
+
+### Exercice 2 — Ondulations
+
+| Image originale | Ondulations |
+|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Ondulations](images/exos_perso/ondulations.png) |
+
+Cet effet déforme l'image en décalant les pixels horizontalement et verticalement selon des fonctions sinusoïdales. L'amplitude et la fréquence des sinus permettent de contrôler l'intensité et l'espacement des ondulations.
+
+
+### Exercice 3 — Peinture à l'huile
+
+| Image originale | Peinture à l'huile |
+|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Peinture huile](images/exos_perso/peinture_huile.png) |
+
+Cet effet donne à l'image un aspect de peinture à l'huile. Pour chaque pixel, les pixels voisins sont regroupés selon leur luminosité en plusieurs catégories. La couleur du groupe le plus représenté est ensuite utilisée pour remplacer le pixel d'origine, ce qui crée des zones de couleurs plus uniformes.
+
+
+### Exercice 4 — Pointillisme
+
+| Image originale | Poitillisme |
+|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Pointillisme](images/exos_perso/pointillisme.png) |
+
+Cet effet s'inspire de la technique du pointillisme, qui consiste à composer une image à partir de petits points de couleur. L'image est d'abord remplie de blanc, puis des cercles sont dessinés à intervalles réguliers. Chaque cercle reprend la couleur du pixel correspondant dans l'image originale.
+
+
+### Exercice 5 — Hachures
+
+| Image originale | Hachures |
+|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Hachures](images/exos_perso/hachures.png) |
+
+J'ai trouvé cette idée en me renseignant sur l'ordered dithering donc j'ai eu envie de la réaliser.
+Cet effet transforme l'image en dessin noir et blanc à l'aide de motifs de lignes. La luminosité de chaque pixel détermine les hachures appliquées : les zones sombres reçoivent plusieurs directions de traits, tandis que les zones claires restent principalement blanches.
+
+
+### Exercice 6 — Low Poly
+
+| Image originale | Low Poly |
+|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Low Poly](images/exos_perso/low_poly.png) |
+
+Cet effet simplifie l'image en la découpant en triangles. Chaque triangle est rempli avec une couleur prélevée dans l'image originale, à proximité de son centre. L'ensemble forme une mosaïque géométrique qui conserve les principales couleurs et formes de l'image.
+
+
+### Exercice 7 — Néon
+
+| Image originale | Néon bleu | Néon rose |
+|:---:|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Néon bleu](images/exos_perso/neon_bleu.png) | ![Néon rose](images/exos_perso/neon_rose.png) |
+
+Cet effet détecte les contours de l'image en comparant la luminosité des pixels voisins horizontalement et verticalement. Les variations importantes indiquent les contours, qui sont ensuite colorés avec une couleur personnalisable sur un fond sombre. 
+
+```cpp
+void neon(sil::Image const& image, glm::vec3 const& couleur_neon);
+  ```
+<details>
+  <summary>Arguments de la fonction</summary>
+  <p>J'ai mis la couleur du néon comme argument de la fonction pour qu'on puisse la choisir. Pour cela, j'ai inclus dans ma fonction main() la définition de cette valeur.
+  </p>
+</details>
+
+
+### Exercice 8 — Vision thermique
+
+| Image originale | Vision thermique |
+|:---:|:---:|
+| ![Image originale](images/chat.jpg) | ![Vision thermique](images/exos_perso/vision_thermique.png) |
+
+Cet effet transforme les couleurs de l'image en une palette inspirée des caméras thermiques. La luminosité de chaque pixel détermine sa nouvelle couleur : les zones sombres deviennent bleues ou violettes, les zones intermédiaires rouges ou jaunes, et les zones les plus lumineuses tendent vers le blanc.
