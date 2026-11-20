@@ -61,7 +61,7 @@ int main()
 {
     //Pour éviter des affichages étranges, je ne mets pas d'accent dans les messages à afficher.
     //Paramètres choisis par l'utilisateur : 
-/*
+
     // Nombre maximal d'effets aléatoires pour l'image bruitée, le glitch et le tri de pixels aléatoires
     std::cout << "Nombre maximal de la repetition de l'effet (image bruitee, glitch et tri de pixels aléatoires) : ";
     int max_nb_effet;
@@ -460,7 +460,7 @@ int main()
         diff_flou (image, taille_kernel, diff_kernel);
         image.save("images/difficulte-4/diff_flou.png");
     }
-*/
+
 
 //Mes exos : 
     {
@@ -503,7 +503,7 @@ int main()
         sil::Image image{"images/chat.jpg"};
         vision_thermique(image);
     }
-        
+      
         
 
     return 0;
