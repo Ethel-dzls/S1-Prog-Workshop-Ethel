@@ -1,4 +1,3 @@
-
 #include <sil/sil.hpp>
 #include <glm/glm.hpp>
 #include <cmath>
@@ -315,7 +314,7 @@ void low_poly(sil::Image const& image)
     sil::Image nouvelle_image{image.width(), image.height()};
 
     // Taille des cellules de la grille qui sert à construire les triangles : une petite valeur produit davantage de triangles et conserve plus de détails
-    int const taille{12};
+    int const taille{30};
 
     // Parcours de l'image par cellules carrées de taille "taille"
     for (int x{0}; x < image.width(); x += taille)

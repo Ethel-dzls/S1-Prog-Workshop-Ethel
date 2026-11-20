@@ -504,7 +504,6 @@ int main()
         vision_thermique(image);
     }
  
-        
 
     return 0;
 }
