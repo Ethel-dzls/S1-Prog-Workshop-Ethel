@@ -11,14 +11,14 @@
 
 //Exo 1 : Rosace
 
-void rosace (int const rayon, int const epaisseur)
+void rosace (int const largeur, int const hauteur, int const rayon, int const epaisseur)
 {
-    //Taille de l'image définie
-    sil::Image image{500, 500};
+    //Création d'une nouvelle image aux dimensions demandées par l'utilisateur
+    sil::Image image{largeur, hauteur};
 
-    //Centre de l'image et donc du rond central
-    int const x_0 {250};
-    int const y_0 {250};
+    //Centre de l'image et donc du cercle central (si la largeur/hauteur est impaire alors le centre sera décalé d'un demi pixel vers la gauche/le bas car il faut une valeur entière)
+    int const x_0 {largeur/2};
+    int const y_0 {hauteur/2};
 
     //Cercle du centre
     for (int x{0}; x < image.width(); x++)
@@ -269,7 +269,7 @@ void tri_pixels_ligne_bleu(sil::Image& image)
 }
 
 
-//Tri de pixels alétoires par ligne par valeur du canal vert décroissante
+//Tri de pixels aléatoires par ligne par valeur du canal vert décroissante
 void tri_pixels_aleatoire_ligne_vert_dec(sil::Image& image, int const max_nb_effet)
 {
     //Nombre aléatoire de portions de lignes à trier

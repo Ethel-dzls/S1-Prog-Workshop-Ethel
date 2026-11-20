@@ -39,7 +39,7 @@ void fractale_Mandelbrot(int const largeur, int const hauteur);
 void degrade_mix_rb(int const largeur, int const hauteur);
 void degrade_oklab_rb(int const largeur, int const hauteur);
 void ordered_dithering (sil::Image& image);
-void normalisation_historigramme (sil::Image& image);
+void normalisation_histogramme (sil::Image& image);
 void vortex (sil::Image& image, float const angle_max);
 void flou_generalise (sil::Image& image, int const taille_kernel);
 void convolution(sil::Image& image, float const kernel[3][3]);
@@ -351,8 +351,8 @@ int main()
 
     {
         sil::Image image{"images/photo_faible_contraste.jpg"};
-        normalisation_historigramme(image);
-        image.save("images/difficulte-4/normalisation_historigramme.png");
+        normalisation_histogramme(image);
+        image.save("images/difficulte-4/normalisation_histogramme.png");
     }
 
     {

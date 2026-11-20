@@ -146,14 +146,14 @@ void assombrir(sil::Image& image)
 
 //Exo 6 : Disque
 
-void disque(int const rayon)
+void disque(int const largeur, int const hauteur, int const rayon)
 {
-    //Taille de l'image définie
-    sil::Image image{500, 500};
+    //Création d'une nouvelle image aux dimensions demandées par l'utilisateur
+    sil::Image image{largeur, hauteur};
 
-    //Centre de l'image
-    int const x_0 {250};
-    int const y_0 {250};
+    //Centre de l'image (si la largeur/hauteur est impaire alors le centre sera décalé d'un demi pixel vers la gauche/le bas car il faut une valeur entière)
+    int const x_0 {largeur/2};
+    int const y_0 {hauteur/2};
 
     for (int x{0}; x < image.width(); x++)
     {
@@ -174,13 +174,14 @@ void disque(int const rayon)
 
 //Exo 7 : Cercle
 
-void cercle(int const rayon, int const epaisseur)
+void cercle(int const largeur, int const hauteur, int const rayon, int const epaisseur)
 {
-    sil::Image image{500, 500};
+    //Création d'une nouvelle image aux dimensions demandées par l'utilisateur
+    sil::Image image{largeur, hauteur};
 
-    //Centre de l'image
-    int const x_0 {250};
-    int const y_0 {250};
+    //Centre de l'image (si la largeur/hauteur est impaire alors le centre sera décalé d'un demi pixel vers la gauche/le bas car il faut une valeur entière)
+    int const x_0 {largeur/2};
+    int const y_0 {hauteur/2};
 
     for (int x{0}; x < image.width(); x++)
     {
@@ -202,17 +203,16 @@ void cercle(int const rayon, int const epaisseur)
 
 //Exo 8 : Animation disques
 
-void animation_disques(int rayon)
+void animation_disques(int const largeur, int const hauteur, int rayon)
 {
-    int const hauteur{500};
-    int const largeur{500};
 
-    //Position verticale fixe du centre du disque au milieu de l'image
+    //Position verticale fixe du centre du disque au milieu de l'image (si la hauteur est impaire alors le centre sera décalé d'un demi pixel vers le bas car il faut une valeur entière)
     int const y_0{hauteur / 2};
 
     //On crée une image à chaque position du cercle (juste avant le bord gauche à juste après le bord droit)
     for (int i{0}; i<=largeur+2*rayon; i++)
     {
+        //Création d'images aux dimensions demandées par l'utilisateur
         sil::Image image{largeur, hauteur};
         //Position horizontale du centre du disque
         int const x_0{i - rayon};

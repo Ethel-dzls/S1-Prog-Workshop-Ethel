@@ -284,9 +284,9 @@ void ordered_dithering (sil::Image& image)
 
 
 
-//Exo 4 : Normalisation de l'historigramme
+//Exo 4 : Normalisation de l'histogramme
 
-void normalisation_historigramme (sil::Image& image)
+void normalisation_histogramme (sil::Image& image)
 {
     //Initialisation des luminosités minimale et maximale avec le 1er pixel
     float luminosite_min = 0.2126f * image.pixel(0,0).r + 0.7152f * image.pixel(0,0).g + 0.0722f * image.pixel(0,0).b;
