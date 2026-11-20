@@ -1,51 +1,40 @@
-
-# 🐣 S1 | Prog : Workshop
-
-Workshop de programmation en C++ réalisé dans le cadre de la formation IMAC à l'ESIEE Paris.
-
-Sujet du workshop : https://dsmte.github.io/Learn--cpp_programming/Workshop
-
-
-
-
-
 # Rapport Workshop de programmation S1 - Ethel Douzals
 
 
 
-# Difficulté 1 ⭐
+## Difficulté 1 ⭐
 
 
 
-## Exercice 1 — Ne garder que le vert
+### Exercice 1 — Ne garder que le vert
 
 | Image originale | Image avec uniquement le vert |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Vert uniquement](images/difficulte-1/garder_que_vert.png) |
 
 
-## Exercice 2 — Échanger les canaux
+### Exercice 2 — Échanger les canaux
 
 | Image originale | Image après l'échange des canaux vert et bleu |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Canaux vert et bleu échangés](images/difficulte-1/echange_vert_bleu.png) |
 
 
-## Exercice 3 — Noir et blanc
+### Exercice 3 — Noir et blanc
 
 | Image originale | Image en nuances de gris |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Nuances de gris](images/difficulte-1/nuances_gris.png) |
 
 
-## Exercice 4 — Négatif
+### Exercice 4 — Négatif
 
 | Image originale | Négatif |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Négatif](images/difficulte-1/negatif.png) |
 
 
-## Exercice 5 — Dégradé
+### Exercice 5 — Dégradé
 
 ![Dégradé](images/difficulte-1/degrade.png)
 
@@ -54,10 +43,10 @@ Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petit
 
 
 
-# Difficulté 2 ⭐⭐
+## Difficulté 2 ⭐⭐
 
 
-## Exercice 1 — Miroir
+### Exercice 1 — Miroir
 
 | Image originale | Image miroir |
 |:---:|:---:|
@@ -66,7 +55,7 @@ Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petit
 Il faut faire attention à parcourir uniquement la moitié de l'image car sinon il y aura 2 fois l'échange de pixels et donc l'image sera identique à l'originale.
 
 
-## Exercice 2 — Image bruitée
+### Exercice 2 — Image bruitée
 
 | Image originale | Image bruitée |
 |:---:|:---:|
@@ -77,7 +66,7 @@ L'entier nb_pixels_bruit n'est pas le nombre précis de pixels différents mais 
 Il faut faire attention aux bornes des fonctions random_int et random_float car le maximum est exclu.
     
 
-## Exercice 3 — Rotation à 90° et à 270°
+### Exercice 3 — Rotation à 90° et à 270°
 
 | Image originale | Rotation à 90° | Rotation à 270° |
 |:---:|:---:|:---:|
@@ -86,7 +75,7 @@ Il faut faire attention aux bornes des fonctions random_int et random_float car 
 Il faut faire attention aux dimensions de la nouvelle image crée qui sont l'inverse de l'image originale.
 
 
-## Exercice 4 — RGB split
+### Exercice 4 — RGB split
 
 | Image originale | RGB split |
 |:---:|:---:|
@@ -95,7 +84,7 @@ Il faut faire attention aux dimensions de la nouvelle image crée qui sont l'inv
 J'ai mis la valeur du décalage des couleurs comme argument de la fonction pour que l'utilisateur puisse choisir le décalage qu'il souhaite. Pour cela, j'ai inclus dans ma fonction main() la demande de cette valeur.
 
 
-## Exercice 5 — Luminosité
+### Exercice 5 — Luminosité
 
 | Image originale | Image éclaircie | Image assombrie |
 |:---:|:---:|:---:|
@@ -104,7 +93,7 @@ J'ai mis la valeur du décalage des couleurs comme argument de la fonction pour 
 Pour éclaircir l'image, j'applique la racine carrée à chaque composante de couleur. Pour l'assombrir, j'élève chaque composante au carré. Cela permet de modifier l'intensité des couleurs tout en conservant leurs proportions.
 
 
-## Exercice 6 — Disque
+### Exercice 6 — Disque
 
 ![Disque](images/difficulte-2/disque.png)
 
@@ -112,7 +101,7 @@ J'ai mis la valeur du rayon comme argument de la fonction pour que l'utilisateur
 Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 
 
-## Exercice 7 — Cercle
+### Exercice 7 — Cercle
 
 ![Cercle](images/difficulte-2/cercle.png)
 
@@ -120,7 +109,7 @@ J'ai mis les valeurs du rayon et de l'épaisseur comme arguments de la fonction 
 Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 
 
-## Exercice 8 — Animation
+### Exercice 8 — Animation
 
 ![Animation](images/difficulte-2/animation.gif)
 
@@ -128,10 +117,10 @@ J'ai appris comment il faut faire pour sauvegarder toutes les images une à une 
 
 
 
-# Difficulté 3 ⭐⭐⭐
+## Difficulté 3 ⭐⭐⭐
 
 
-## Exercice 1 — Rosace
+### Exercice 1 — Rosace
 
 ![Rosace](images/difficulte-3/rosace.png)
 
@@ -140,7 +129,7 @@ Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoi
 Il faut faire attention à l'unité des angles qui doivent être exprimés en radians.
 
 
-## Exercice 2 — Mosaïque
+### Exercice 2 — Mosaïque
 
 | Image originale | Mosaïque |
 |:---:|:---:|
@@ -150,14 +139,14 @@ J'ai mis les valeurs du nombre d'images en largeur et en hauteur comme arguments
 Il faut faire attention aux dimensions de la nouvelle image crée qui dépendent du nombre d'image en largeur et en hauteur.
 
 
-## Exercice 3 — Mosaïque miroir
+### Exercice 3 — Mosaïque miroir
 
 | Image originale | Mosaïque miroir |
 |:---:|:---:|
 | ![Image originale](images/logo.png) | ![Mosaïque miroir](images/difficulte-3/mosaique_miroir.png) |
 
 
-## Exercice 4 — Glitch
+### Exercice 4 — Glitch
 
 | Image originale | Glitch |
 |:---:|:---:|
@@ -168,7 +157,7 @@ De même, j'ai borné les valeurs de largeur et hauteur des effets du glitch par
 Il faut vérifier que les coordonnées calculées restent dans les limites de l'image pour éviter d'accéder à des pixels inexistants.
 
 
-## Exercice 5 — Tri des pixels
+### Exercice 5 — Tri des pixels
 
 **Tri de tous les pixels par luminosité croissante :**
 
@@ -201,10 +190,10 @@ J'ai limité la valeur de largeur de la zone à trier par celle de l'image divis
 
 
 
-# Difficulté 4 ⭐⭐⭐⭐
+## Difficulté 4 ⭐⭐⭐⭐
 
 
-## Exercice 1 — Fractale de Mandelbrot
+### Exercice 1 — Fractale de Mandelbrot
 
 ![Fractale de Mandelbrot](images/difficulte-4/fractale_Mandelbrot.png)
 
@@ -214,7 +203,7 @@ Je limite le nombre d'itérations à 100 pour éviter une boucle infinie.
 La couleur dépend du nombre d'itérations effectuées avant que le point ne dépasse cette limite.
 
 
-## Exercice 2 — Dégradés de couleurs : sRGB et Oklab
+### Exercice 2 — Dégradés de couleurs : sRGB et Oklab
 
 | Dégradé sRGB | Dégradé Oklab |
 |:---:|:---:|
@@ -225,7 +214,7 @@ Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petit
 Pour simplifier les écritures et bien différencier l'espace de couleur dans lequel je travaille j'ai définie les structures Lab et LinearRGB.
 
 
-## Exercice 3 — Ordered dithering
+### Exercice 3 — Ordered dithering
 
 | Image originale | Ordered dithering |
 |:---:|:---:|
@@ -235,7 +224,7 @@ J'utilise une matrice de Bayer de taille 4 × 4 (trouvée sur internet) pour fai
 L'opérateur modulo me permet de répéter la matrice sur toute l'image.
 
 
-## Exercice 4 — Normalisation de l'histogramme
+### Exercice 4 — Normalisation de l'histogramme
 
 | Image originale | Normalisation de l'histogramme |
 |:---:|:---:|
@@ -245,7 +234,7 @@ Après avoir trouvée les valeurs minimale et maximale de luminosité de l'image
 Il faut faire attention aux divisions par zéro, notamment si toutes les luminosités sont identiques ou si la luminosité du pixel vaut zéro.
 
 
-## Exercice 5 — Vortex
+### Exercice 5 — Vortex
 
 | Image originale | Vortex |
 |:---:|:---:|
@@ -258,7 +247,7 @@ J'ai mis la valeur de l'angle maximal comme argument de la fonction pour que l'u
 
 
 
-## Exercice 6 — Convolutions
+### Exercice 6 — Convolutions
 
 **Images originales :**
 
