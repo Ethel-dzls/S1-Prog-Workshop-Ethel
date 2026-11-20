@@ -50,10 +50,11 @@ void diff_flou (sil::Image& image, int const taille_kernel, int const diff_kerne
 
 int main()
 {
+    //Pour éviter des affichages étranges, je ne mets pas d'accent dans les messages à afficher.
     //Paramètres choisis par l'utilisateur : 
 
     // Nombre maximal d'effets aléatoires pour l'image bruitée, le glitch et le tri de pixels aléatoires
-    std::cout << "Nombre maximal de la répétition de l'effet (image bruitée, glitch et tri de pixels aléatoires) : ";
+    std::cout << "Nombre maximal de la repetition de l'effet (image bruitee, glitch et tri de pixels aléatoires) : ";
     int max_nb_effet;
     std::cin >> max_nb_effet;
 
@@ -66,44 +67,44 @@ int main()
     }
    
     //Décalage horizontal des canaux rouge et bleu pour le RGB split
-    std::cout<<"Décalage souhaité pour l'image de l'exo RGB Split : ";
+    std::cout<<"Decalage souhaite pour l'image de l'exo RGB Split : ";
     int decalage;
     std::cin>>decalage;
     std::cout<<"\n";
 
-    while (decalage < 0)
+    while (decalage <= 0)
     {
-        std::cout << "Veuillez entrer un entier POSITIF : ";
+        std::cout << "Veuillez entrer un entier STRICTEMENT POSITIF : ";
         std::cin>>decalage;
         std::cout<<"\n";
     }
 
-    //Rayon utilisé pour les disques, les cercles et la rosace
+    //Rayon utilisé pour les disques, les cercles, l'animation et la rosace
     std::cout << "Rayon des disques et des cercles : ";
     int rayon;
     std::cin >> rayon;
 
-    while (rayon < 0)
+    while (rayon <= 0)
     {
-        std::cout << "Veuillez entrer un entier POSITIF : ";
+        std::cout << "Veuillez entrer un entier STRICTEMENT POSITIF : ";
         std::cin>>rayon;
         std::cout<<"\n";
     }
 
-    //Epaisseur des cercles et de la rosace
+    //Epaisseur pour les cercles et la rosace
     std::cout << "Epaisseur des cercles : ";
     int epaisseur;
     std::cin >> epaisseur;
 
-    while (epaisseur < 0 || epaisseur > rayon)
+    while (epaisseur <= 0 || epaisseur > rayon)
     {
-        std::cout << "Veuillez entrer un entier POSITIF INFERIEUR AU RAYON : ";
+        std::cout << "Veuillez entrer un entier STRICTEMENT POSITIF INFERIEUR AU RAYON : ";
         std::cin>>epaisseur;
         std::cout<<"\n";
     }
 
-    //Nombre de répétitions de l'image pour les mosaïques
-    std::cout << "Nombre d'images à afficher sur la largeur : ";
+    //Nombre de répétitions de l'image pour la mosaïque et la mosaïque miroir
+    std::cout << "Nombre d'images a afficher sur la largeur : ";
     int nb_largeur;
     std::cin >> nb_largeur;
 
@@ -114,7 +115,7 @@ int main()
         std::cout<<"\n";
     }
 
-    std::cout << "Nombre d'images à afficher sur la hauteur : ";
+    std::cout << "Nombre d'images a afficher sur la hauteur : ";
     int nb_hauteur;
     std::cin >> nb_hauteur;
 
@@ -125,7 +126,7 @@ int main()
         std::cout<<"\n";
     }
 
-    //Dimensions des images créées pour les dégradés et la fractale
+    //Dimensions des images créées pour le dégradé, les dégradés colorés et la fractale de Mandelbrot
     std::cout << "Largeur de l'image : ";
     int largeur;
     std::cin >> largeur;
@@ -153,7 +154,7 @@ int main()
     float angle_max;
     std::cin >> angle_max;
 
-    //Taille du kernel utilisé pour le flou
+    //Taille du kernel utilisé pour le flou généralisé
     std::cout << "Taille du kernel : ";
     int taille_kernel;
     std::cin >> taille_kernel;
@@ -167,7 +168,7 @@ int main()
     }
 
     //Différence entre les tailles des 2 kernels utilisés pour la différence des flous
-    std::cout << "Différence entre les tailles des 2 kernels utilisés pour la différence des flous : ";
+    std::cout << "Différence entre les tailles des 2 kernels utilises pour la difference des flous : ";
     int diff_kernel;
     std::cin >> diff_kernel;
 

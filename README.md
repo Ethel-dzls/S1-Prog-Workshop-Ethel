@@ -50,6 +50,7 @@ Sujet du workshop : https://dsmte.github.io/Learn--cpp_programming/Workshop
 ![Dégradé](images/difficulte-1/degrade.png)
 
 J'ai mis la valeur de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 
 
 
@@ -108,6 +109,7 @@ Pour éclaircir l'image, j'applique la racine carrée à chaque composante de co
 ![Disque](images/difficulte-2/disque.png)
 
 J'ai mis la valeur du rayon comme argument de la fonction pour que l'utilisateur puisse le choisir. Pour cela, j'ai inclus dans ma fonction main() la demande de cette valeur.
+Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 
 
 ## Exercice 7 — Cercle
@@ -115,32 +117,14 @@ J'ai mis la valeur du rayon comme argument de la fonction pour que l'utilisateur
 ![Cercle](images/difficulte-2/cercle.png)
 
 J'ai mis les valeurs du rayon et de l'épaisseur comme arguments de la fonction pour que l'utilisateur puisse les choisir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
-
-
-
-
-
-
-
+Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 
 
 ## Exercice 8 — Animation
 
-**Résultat :** à compléter.
+![Animation](images/difficulte-2/animation.gif)
 
-**Explication :**
-
-À compléter selon le fonctionnement de l'animation réalisée et les images ou les fichiers générés.
-
-
-
-
-
-
-
-
-
-
+J'ai appris comment il faut faire pour sauvegarder toutes les images une à une dans une boucle.
 
 
 
@@ -152,6 +136,7 @@ J'ai mis les valeurs du rayon et de l'épaisseur comme arguments de la fonction 
 ![Rosace](images/difficulte-3/rosace.png)
 
 J'ai mis les valeurs du rayon et de l'épaisseur comme arguments de la fonction pour que l'utilisateur puisse les choisir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je ne majore pas le rayon et laisse donc la possibilité à l'utilisateur d'avoir un cercle qui prend toute l'image qui est alors entièrement blanche.
 Il faut faire attention à l'unité des angles qui doivent être exprimés en radians.
 
 
@@ -224,6 +209,7 @@ J'ai limité la valeur de largeur de la zone à trier par celle de l'image divis
 ![Fractale de Mandelbrot](images/difficulte-4/fractale_Mandelbrot.png)
 
 J'ai mis les valeurs de la hauteur et de la largeur comme arguments de la fonction pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 Je limite le nombre d'itérations à 100 pour éviter une boucle infinie. 
 La couleur dépend du nombre d'itérations effectuées avant que le point ne dépasse cette limite.
 
@@ -235,6 +221,7 @@ La couleur dépend du nombre d'itérations effectuées avant que le point ne dé
 | ![Dégradé sRGB](images/difficulte-4/degrade_mix_rb.png) | ![Dégradé Oklab](images/difficulte-4/degrade_oklab_rb.png) |
 
 J'ai mis les valeurs de la hauteur et de la largeur comme arguments des fonctions pour que l'utilisateur puisse choisir la taille de l'image qu'il veut obtenir. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
+Je les ai minoré par 100 pour avoir une taille d'image qui n'est pas trop petite.
 Pour simplifier les écritures et bien différencier l'espace de couleur dans lequel je travaille j'ai définie les structures Lab et LinearRGB.
 
 
@@ -270,6 +257,7 @@ Il faut vérifier que le pixel source se trouve bien dans l'image.
 J'ai mis la valeur de l'angle maximal comme argument de la fonction pour que l'utilisateur puisse choisir la rotation maximale qu'il souhaite. Pour cela, j'ai inclus dans ma fonction main() la demande de cette valeur.
 
 
+
 ## Exercice 6 — Convolutions
 
 **Images originales :**
@@ -290,6 +278,7 @@ J'ai mis la valeur de l'angle maximal comme argument de la fonction pour que l'u
 
 J'ai trouvé une formule de convolution pour les kernel de taille 3 x 3 qui me permet d'appliquer les différents effets à partir de leur matrice (définie dans la fonction main()).
 J'ai également trouvé une formule plus générale pour l'effet de flou qui permet à l'utilisateur de choisir la taille du kernel afin d'avoir une image plus ou moins floue.
+J'impose à la taille du kernel d'être impaire pour avoir un pixel central.
 Il faut faire attention à bien gérer les pixels situés sur les bords de l'image, car ils n'ont pas tous leurs voisins.
 
 
@@ -299,4 +288,4 @@ Il faut faire attention à bien gérer les pixels situés sur les bords de l'ima
 
 L'algorithme sert à faire une différence de deux mêmes images mais avec un flou plus ou moins prononcé afin d'obtenir une image en noir et blanc faisant ressortir les contours. 
 J'ai mis les valeurs de la taille du kernel et de la différence entre les deux tailles de kernel comme arguments de la fonction pour que l'utilisateur puisse choisir l'effet qu'il veut. Pour cela, j'ai inclus dans ma fonction main() la demande de ces valeurs.
-Cependant, j'impose le seuil à 0.01 pour que les contours apparaissent mais sans être très larges.
+J'impose à la taille des kernels d'être impaire (et donc à la différence d'être paire) pour avoir un pixel central.Cependant, j'impose le seuil à 0.01 pour que les contours apparaissent mais sans être très larges.
