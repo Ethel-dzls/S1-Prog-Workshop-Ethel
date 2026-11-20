@@ -46,13 +46,22 @@ void convolution(sil::Image& image, float const kernel[3][3]);
 void diff_flou (sil::Image& image, int const taille_kernel, int const diff_kernel);
 
 
+//Fonctions de mes exos
+void fisheye(sil::Image const& image);
+void ondulations(sil::Image const& image);
+void peinture_huile(sil::Image const& image);
+void pointillisme(sil::Image const& image);
+void hachures(sil::Image const& image);
+void low_poly(sil::Image const& image);
+void neon(sil::Image const& image, glm::vec3 const& couleur_neon);
+void vision_thermique(sil::Image const& image);
 
 
 int main()
 {
     //Pour éviter des affichages étranges, je ne mets pas d'accent dans les messages à afficher.
     //Paramètres choisis par l'utilisateur : 
-
+/*
     // Nombre maximal d'effets aléatoires pour l'image bruitée, le glitch et le tri de pixels aléatoires
     std::cout << "Nombre maximal de la repetition de l'effet (image bruitee, glitch et tri de pixels aléatoires) : ";
     int max_nb_effet;
@@ -451,7 +460,51 @@ int main()
         diff_flou (image, taille_kernel, diff_kernel);
         image.save("images/difficulte-4/diff_flou.png");
     }
+*/
 
+//Mes exos : 
+    {
+        sil::Image image{"images/chat.jpg"};
+        fisheye(image);
+    }
+
+    {
+        sil::Image image{"images/chat.jpg"};
+        ondulations(image);
+    }
+
+    {
+        sil::Image image{"images/chat.jpg"};
+        peinture_huile(image);
+    }
+
+    {
+        sil::Image image{"images/chat.jpg"};
+        pointillisme(image);
+    }
+
+    {
+        sil::Image image{"images/chat.jpg"};
+        hachures(image);
+    }
+
+    {
+        sil::Image image{"images/chat.jpg"};
+        low_poly(image);
+    }
+
+    {
+        sil::Image image{"images/chat.jpg"};
+        // Rose
+        neon(image, glm::vec3{1.f, 0.1f, 0.6f});
+    }
+
+    {
+        sil::Image image{"images/chat.jpg"};
+        vision_thermique(image);
+    }
+        
+        
 
     return 0;
 }
