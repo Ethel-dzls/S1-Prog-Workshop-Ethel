@@ -113,7 +113,7 @@ void rgb_split(sil::Image& image, int decalage);
 
 | Image originale | Image éclaircie | Image assombrie |
 |:---:|:---:|:---:|
-| ![Image originale](images/logo.png) | ![Image éclaircie](images/difficulte-2/eclaircir.png) | ![Image assombrie](images/difficulte-2/assombrir.png) |
+| ![Image originale](images/photo.jpg) | ![Image éclaircie](images/difficulte-2/eclaircir.png) | ![Image assombrie](images/difficulte-2/assombrir.png) |
 
 Pour éclaircir l'image, j'applique la racine carrée à chaque composante de couleur. Pour l'assombrir, j'élève chaque composante au carré. Cela permet de modifier l'intensité des couleurs tout en conservant leurs proportions.
 
@@ -361,7 +361,7 @@ L'opérateur modulo me permet de répéter la matrice sur toute l'image.
 
 | Image originale | Normalisation de l'histogramme |
 |:---:|:---:|
-| ![Image originale](images/photo_faible_contraste.jpg) | ![Histogramme normalisé](images/difficulte-4/normalisation_historigramme.png) |
+| ![Image originale](images/photo_faible_contraste.jpg) | ![Histogramme normalisé](images/difficulte-4/normalisation_histogramme.png) |
 
 Après avoir trouvée les valeurs minimale et maximale de luminosité de l'image, j'étire la luminosité entre 0 et 1 pour que la luminosité la plus faible corresponde à 0 et la plus élevée à 1. Pour conserver les proportions entre les composantes rouge, verte et bleue, j'applique le même facteur de mise à l'échelle aux trois canaux d'un pixel.
 Il faut faire attention aux divisions par zéro, notamment si toutes les luminosités sont identiques ou si la luminosité du pixel vaut zéro.
@@ -448,7 +448,6 @@ void diff_flou (sil::Image& image, int const taille_kernel, int const diff_kerne
 
 En complément des exercices proposés, j'ai réalisé plusieurs effets personnels qui m'intéressaient afin d'explorer différentes transformations d'images et techniques de traitement des pixels. Pour m'aider, me suis basée sur la description des algorithmes derrière ces effets.
 Pour simplifier, je n'ai pas rajouté d'arguments au choix pour l'utilisateur.
-Egalement, j'ai simplifié l'expression de la luminosité en faisant uniquement la moyenne des valeurs des 3 canaux.
 
 
 ### Exercice 1 — Effet fisheye
@@ -482,7 +481,7 @@ Cet effet donne à l'image un aspect de peinture à l'huile. Pour chaque pixel, 
 
 ### Exercice 4 — Pointillisme
 
-| Image originale | Poitillisme |
+| Image originale | Pointillisme |
 |:---:|:---:|
 | ![Image originale](images/chat.jpg) | ![Pointillisme](images/exos_perso/pointillisme.png) |
 
